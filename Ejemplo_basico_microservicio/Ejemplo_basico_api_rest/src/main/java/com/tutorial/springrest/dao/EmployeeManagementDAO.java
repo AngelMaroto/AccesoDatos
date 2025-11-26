@@ -13,4 +13,6 @@ public interface EmployeeManagementDAO {
 	public Employee get(int id);
 	
 	public List<Employee> list();
+
+    public void update(Employee employee);
 }

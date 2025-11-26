@@ -14,9 +14,9 @@ public class EmployeeManagementDAOImpl implements EmployeeManagementDAO {
 		private static List<Employee> employees;
 		{
 			employees = new ArrayList<Employee>();
-			employees.add(new Employee(101, "Test 1", "test1@gmail.com", "", "121-232-3435"));
-			employees.add(new Employee(201, "Test 4", "test3@gmail.com", "", "343-545-2345"));
-			employees.add(new Employee(301, "Test 3", "test3@gmail.com", "", "876-237-2987"));
+			employees.add(new Employee(101, "Test 6", "test333331@gmail.com", "", "121-232-3435"));
+			employees.add(new Employee(201, "Test 1", "test33333@gmail.com", "", "343-545-2345"));
+			employees.add(new Employee(301, "Test 3", "test3333@gmail.com", "", "876-237-2987"));
 		}
 
 		/**
@@ -28,7 +28,19 @@ public class EmployeeManagementDAOImpl implements EmployeeManagementDAO {
 			return employees;
 		}
 
-		/**
+        @Override
+        public void update(Employee employee) {
+            int oldId = 0;
+            if(employee != null && employee.getId() > 0) {
+                oldId = employee.getId();
+                Employee emp = get(oldId);
+                employees.remove(emp);
+            }
+            employee.setId(oldId);
+            employees.add(employee);
+        }
+
+    /**
 		 * Return employee object for given id from dummy database. If employee is
 		 * not found for id, returns null.
 		 * 
