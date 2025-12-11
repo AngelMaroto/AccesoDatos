@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/HibernateNaN_ColumnaExtra_Solucion1/HibernateNaN_ColumnaExtra_Solucion1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Practica1-Medico" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Practica3-Medico-MongoDB" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/PracticaHibernate" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/PracticaObligatoriaJson" vcs="Git" />
+  </component>
+</project>
