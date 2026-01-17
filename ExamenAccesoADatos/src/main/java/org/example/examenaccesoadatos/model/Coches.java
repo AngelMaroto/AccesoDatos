@@ -26,18 +26,19 @@ public class Coches implements Serializable {
     @Column(name = "km")
     private String km;
 
-    @OneToMany(mappedBy = "coches", cascade = CascadeType.ALL)
-    private List<Coches> coches;
+    //UN COCHE TIENE MUCHAS REPARACIONES
+    @OneToMany(mappedBy = "coche", cascade = CascadeType.ALL)
+    private List<Reparacion> reparaciones;
 
     public Coches() {
     }
 
-    public Coches(int idCoche, String matricula, String marca, String km, List<Coches> coches) {
+    public Coches(int idCoche, String matricula, String marca, String km, List<Reparacion> reparaciones) {
         this.idCoche = idCoche;
         this.matricula = matricula;
         this.marca = marca;
         this.km = km;
-        this.coches = coches;
+        this.reparaciones = reparaciones;
     }
 
     public int getIdCoche() {
@@ -72,11 +73,11 @@ public class Coches implements Serializable {
         this.km = km;
     }
 
-    public List<Coches> getCoches() {
-        return coches;
+    public List<Reparacion> getCoches() {
+        return reparaciones;
     }
 
-    public void setCoches(List<Coches> coches) {
-        this.coches = coches;
+    public void setCoches(List<Reparacion> reparaciones) {
+        this.reparaciones = reparaciones;
     }
 }
